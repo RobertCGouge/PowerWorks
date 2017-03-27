@@ -13,4 +13,5 @@
         DependencyType = 'PSGalleryNuget'
         Version = '3.4.6'
     }
+    'plattyPS' = @{ DependencyType = 'PSGalleryNuget' }
 }

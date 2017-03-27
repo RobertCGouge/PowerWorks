@@ -1,5 +1,4 @@
 ﻿$here = Split-Path -Parent $MyInvocation.MyCommand.Path
-$sut = (Split-Path -Leaf $MyInvocation.MyCommand.Path).Replace(".Tests.", ".")
 $root = (Get-Item $here).Parent
 
 
