@@ -193,7 +193,7 @@ Task PostDeploy -depends Deploy {
     if (
         $ENV:BHBuildSystem -ne 'Unknown' -and
         $ENV:BHBranchName -eq "master" -and
-        $ENV:BHCommitMessage -match '!deploy'
+        $ENV:BHCommitMessage -match 'deploy'
     ) {
         "Publishing Release 'v$BuildVersion' to Github"
         $parameters = @{
