@@ -2,8 +2,6 @@
 $moduleRoot = Split-Path (Resolve-Path "$projectRoot\PowerWorks\*.psd1")
 $moduleName = Split-Path $moduleRoot -Leaf
 
-$moduleRoot
-
 Import-Module (Join-Path $moduleRoot "$moduleName.psd1") -force
 
 Describe "Help tests for $moduleName" -Tags Build {
