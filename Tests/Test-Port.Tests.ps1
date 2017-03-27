@@ -1,7 +1,14 @@
 ﻿$here = Split-Path -Parent $MyInvocation.MyCommand.Path
 $sut = (Split-Path -Leaf $MyInvocation.MyCommand.Path).Replace(".Tests.", ".")
+$root = (Get-Item $here).Parent
 
-. ..\PowerWorks\Public\$sut
+
+$module = (Get-ChildItem -Path $root.FullName -Recurse -Filter '*.psm1').FullName
+
+import-module $module
+
+
+
 
 Describe "Test-Port" {
     It "Should throw an error on an invalid TCP port number" {
