@@ -18,6 +18,8 @@ Properties {
     {
         $Verbose = @{Verbose = $True}
     }
+    $ReleaseNotes = "$ProjectRoot\RELEASE.md"
+    $ChangeLog = "$ProjectRoot\docs\ChangeLog.md"
 }
 
 Task Default -Depends Test
