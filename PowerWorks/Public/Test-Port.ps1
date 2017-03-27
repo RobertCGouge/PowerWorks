@@ -19,6 +19,12 @@
         
         .OUTPUTS
             This script has no outputs.
+
+        .LINK
+            http://powerworks.readthedocs.io/en/latest/functions/Test-Port.md
+
+        .LINK
+            https://github.com/RobertCGouge/PowerWorks/blob/master/PowerWorks/Public/Test-Port.ps1            
 #>
 function Test-Port
 {
