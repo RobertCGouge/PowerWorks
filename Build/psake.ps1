@@ -136,7 +136,7 @@ Task Deploy -Depends BuildDocs {
     if (
         $ENV:BHBuildSystem -ne 'Unknown' -and
         $ENV:BHBranchName -eq "master" -and
-        $ENV:BHCommitMessage -match '!deploy'
+        $ENV:BHCommitMessage -match 'deploy'
     ) {
         $Params = @{
             Path = $ProjectRoot
