@@ -74,17 +74,6 @@ Task Build -Depends Test {
     }
 }
 
-Task Deploy -Depends Build {
-    $lines
-
-    $Params = @{
-        Path = "$ProjectRoot\Build"
-        Force = $true
-        Recurse = $false # We keep psdeploy artifacts, avoid deploying those : )
-    }
-    Invoke-PSDeploy @Verbose @Params
-}
-
 Task Deploy -Depends BuildDocs {
     $lines
     
