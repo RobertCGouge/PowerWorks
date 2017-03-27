@@ -74,6 +74,59 @@ Task Build -Depends Test {
     }
 }
 
+Task BuildDocs -depends Test {
+    $lines
+    
+    "Loading Module from $ENV:BHPSModuleManifest"
+    Remove-Module $ENV:BHProjectName -Force -ea SilentlyContinue
+    # platyPS + AppVeyor requires the module to be loaded in Global scope
+    Import-Module $ENV:BHPSModuleManifest -force -Global
+    
+    #Build YAMLText starting with the header
+    $YMLtext = (Get-Content "$ProjectRoot\header-mkdocs.yml") -join "`n"
+    $YMLtext = "$YMLtext`n"
+    $parameters = @{
+        Path = $ReleaseNotes
+        ErrorAction = 'SilentlyContinue'
+    }
+    $ReleaseText = (Get-Content @parameters) -join "`n"
+    if ($ReleaseText) {
+        $ReleaseText | Set-Content "$ProjectRoot\docs\RELEASE.md"
+        $YMLText = "$YMLtext  - Realse Notes: RELEASE.md`n"
+    }
+    if ((Test-Path -Path $ChangeLog)) {
+        $YMLText = "$YMLtext  - Change Log: ChangeLog.md`n"
+    }
+    $YMLText = "$YMLtext  - Functions:`n"
+    # Drain the swamp
+    $parameters = @{
+        Recurse = $true
+        Force = $true
+        Path = "$ProjectRoot\docs\functions"
+        ErrorAction = 'SilentlyContinue'
+    }
+    $null = Remove-Item @parameters
+    $Params = @{
+        Path = "$ProjectRoot\docs\functions"
+        type = 'directory'
+        ErrorAction = 'SilentlyContinue'
+    }
+    $null = New-Item @Params
+    $Params = @{
+        Module = $ENV:BHProjectName
+        Force = $true
+        OutputFolder = "$ProjectRoot\docs\functions"
+        NoMetadata = $true
+    }
+    New-MarkdownHelp @Params | foreach-object {
+        $Function = $_.Name -replace '\.md', ''
+        $Part = "    - {0}: functions/{1}" -f $Function, $_.Name
+        $YMLText = "{0}{1}`n" -f $YMLText, $Part
+        $Part
+    }
+    $YMLtext | Set-Content -Path "$ProjectRoot\mkdocs.yml"
+}
+
 Task Deploy -Depends BuildDocs {
     $lines
     
