@@ -2,7 +2,7 @@ site_name: PowerWorks - PowerShell Helper Cmdlets
 repo_url: https://github.com/RobertCGouge/PowerWorks
 site_author: Robert Gouge
 edit_uri: edit/master/docs/
-copyright: "PowerWorks <a href="https://github.com/markekraus/AutoDocumentsExample/raw/master/LICENS">GNU General Public License v3.0</a>"
+copyright: "PowerWorks <a href="https://github.com/RobertCGouge/PowerWorks/blob/master/LICENSE">GNU General Public License v3.0</a>"
   - Realse Notes: RELEASE.md
   - Change Log: ChangeLog.md
   - Functions:
