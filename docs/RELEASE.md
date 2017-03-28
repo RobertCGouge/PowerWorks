@@ -1,11 +1,13 @@
-# Version 0.0.11.41 (2017-03-28)
+# Version 0.0.12.43 (2017-03-28)
          
 ## Notes
 
-Second Release!
+First release with functionality
 
 ## Functtions
 
 ### Test-Port
 
-* Nothing new added.
+* Added support for the Verbose switch.
+* Added support for either using an IPv4 address or computer name
+* Added logic to allow for use
