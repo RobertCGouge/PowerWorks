@@ -17,7 +17,8 @@ Describe "Test-Port -Port parameter" {
         {Test-port -Computer localhost -Port string | should throw}    
     }
 
-<#    It "Should not throw on a valid TCP port number" {
+<# For some reason this test will not pass in AppVeyor.  It should pass locally if you uncomment it.
+    It "Should not throw on a valid TCP port number" {
         {Test-port -Computer localhost -Port 80} | should not throw
     }
 #>
