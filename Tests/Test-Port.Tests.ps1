@@ -21,3 +21,6 @@ Describe "Test-Port -Port parameter" {
         {Test-port -Computer . -Port 25} | should not throw
     }
 }
+
+Descript "Test-Port -Computer parameter"{
+}
