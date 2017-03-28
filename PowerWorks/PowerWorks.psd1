@@ -9,7 +9,7 @@
 
 @{
     RootModule        = 'PowerWorks.psm1'
-    ModuleVersion     = '0.0.14.46'
+    ModuleVersion     = '0.0.15.53'
     GUID              = '92f21958-43c1-437f-9692-0725cc02405f'
     Author            = 'Robert Gouge'
     CompanyName       = 'Unknown'
@@ -25,22 +25,26 @@
             Tags         = @('SysAdmin', 'Networking', 'System', 'Administration', 'Tools')
             LicenseUri   = 'https://github.com/RobertCGouge/PowerWorks/blob/master/LICENSE'
             ProjectUri   = 'https://github.com/RobertCGouge/PowerWorks'
-            ReleaseNotes = '# Version 0.0.14.46 (2017-03-28)
+            ReleaseNotes = '# Version 0.0.15.53 (2017-03-28)
          
 ## Notes
 
-First release with functionality
+Finalize functionality
 
 ## Functtions
 
 ### Test-Port
 
-* Added support for the Verbose switch.
-* Added support for either using an IPv4 address or computer name
-* Added logic to allow for use'
+* Added IPv6 functionality.
+* Completed functionality.'
         }
     }
 }
+
+
+
+
+
 
 
 
