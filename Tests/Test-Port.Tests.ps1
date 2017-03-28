@@ -22,5 +22,5 @@ Describe "Test-Port -Port parameter" {
     }
 }
 
-Descript "Test-Port -Computer parameter"{
+Describe "Test-Port -Computer parameter"{
 }
