@@ -7,24 +7,24 @@ $module = (Get-ChildItem -Path $root.FullName -Recurse -Filter '*.psm1').FullNam
 import-module $module
 
 
-$ip = Resolve-DnsName -Name www.google.com | Where-Object -FilterScript {$_.Type -like 'AAAA'}
+$ip = Resolve-DnsName -Name localhost | Where-Object -FilterScript {$_.Type -like 'AAAA'}
 
 Describe "Test-Port -Port parameter" {
     It "Should throw an error on an invalid TCP port number" {
-        {Test-port -Computer www.google.com -Port 65536} | should throw
+        {Test-port -Computer localhost -Port 65536} | should throw
     }
     It "Should throw an error when a string is passed" {
-        {Test-port -Computer www.google.com -Port string | should throw}    
+        {Test-port -Computer localhost -Port string | should throw}    
     }
 
     It "Should not throw on a valid TCP port number" {
-        {Test-port -Computer www.google.com -Port 80} | should not throw
+        {Test-port -Computer localhost -Port 80} | should not throw
     }
 }
 
 Describe "Test-Port -Computer parameter"{
     It "Should accecpt a string" {
-        {Test-port -Computer www.google.com -Port 80 | should not throw}
+        {Test-port -Computer localhost -Port 80 | should not throw}
     }
     It "Should throw when passed a name that is unabled to be resolved"{
         {Test-Port -Computer notfound -Port 80 | should throw "$_ could not be resolved, please try another computer name."}
