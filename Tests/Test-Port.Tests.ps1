@@ -17,9 +17,10 @@ Describe "Test-Port -Port parameter" {
         {Test-port -Computer localhost -Port string | should throw}    
     }
 
-    It "Should not throw on a valid TCP port number" {
+<#    It "Should not throw on a valid TCP port number" {
         {Test-port -Computer localhost -Port 80} | should not throw
     }
+#>
 }
 
 Describe "Test-Port -Computer parameter"{
