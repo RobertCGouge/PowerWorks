@@ -23,4 +23,8 @@ Describe "Test-Port -Port parameter" {
 }
 
 Describe "Test-Port -Computer parameter"{
+    It "Should accecpt a string"
+    {
+        {Test-port -Computer www.google.com -Port 80 | should not throw}
+    }
 }
