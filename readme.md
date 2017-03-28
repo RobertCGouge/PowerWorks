@@ -16,6 +16,4 @@ Documentation Site: [ttp://powerworks.readthedocs.io/en/latest/](http://powerwor
 
 [Change Log](https://github.com/RobertCGouge/PowerWorks/blob/master/docs/ChangeLog.md)
 
-powerworks
-
 https://readthedocs.org/projects/powerworks/badge/?version=latest
