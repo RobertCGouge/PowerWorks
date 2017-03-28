@@ -2,10 +2,12 @@
          
 ## Notes
 
-Second Release!
+First release with functionality
 
 ## Functtions
 
 ### Test-Port
 
-* Nothing new added.
+* Added support for the Verbose switch.
+* Added support for either using an IPv4 address or computer name
+* Added logic to allow for use
