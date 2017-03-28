@@ -14,7 +14,7 @@ Describe "Test-Port -Port parameter" {
         {Test-port -Computer www.google.com -Port 65536} | should throw
     }
     It "Should throw an error when a string is passed" {
-        {Test-port -Computer www.google.com -Port string}    
+        {Test-port -Computer www.google.com -Port string | should throw}    
     }
 
     It "Should not throw on a valid TCP port number" {
@@ -27,7 +27,7 @@ Describe "Test-Port -Computer parameter"{
         {Test-port -Computer www.google.com -Port 80 | should not throw}
     }
     It "Should throw when passed a name that is unabled to be resolved"{
-        {Test-Port -Computer asdfhjasdkfhjfg -Port 80 | should throw "$_ could not be resolved, please try another computer name."}
+        {Test-Port -Computer notfound -Port 80 | should throw "$_ could not be resolved, please try another computer name."}
     }
         It "Should throw when passed an ip address" {
         {Test-port -Computer 8.8.8.8 -Port 53 | should throw "$_ is an IP address, please try again with -IPv4"}
