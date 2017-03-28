@@ -9,7 +9,7 @@
 
 @{
     RootModule        = 'PowerWorks.psm1'
-    ModuleVersion     = '0.0.5.0'
+    ModuleVersion     = '0.0.6.35'
     GUID              = '92f21958-43c1-437f-9692-0725cc02405f'
     Author            = 'Robert Gouge'
     CompanyName       = 'Unknown'
@@ -25,20 +25,25 @@
             Tags         = @('SysAdmin', 'Networking', 'System', 'Administration', 'Tools')
             LicenseUri   = 'https://github.com/RobertCGouge/PowerWorks/blob/master/LICENSE'
             ProjectUri   = 'https://github.com/RobertCGouge/PowerWorks'
-            ReleaseNotes = '# Version 0.0.5.0 (2017-03-27)
+            ReleaseNotes = '# Version 0.0.6.35 (2017-03-28)
          
 ## Notes
 
-First Release!
+Second Release!
 
 ## Functtions
 
 ### Test-Port
 
-* Added Test-Port function outline'
+* Nothing new added.'
         }
     }
 }
+
+
+
+
+
 
 
 
