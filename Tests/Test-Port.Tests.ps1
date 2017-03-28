@@ -7,7 +7,7 @@ $module = (Get-ChildItem -Path $root.FullName -Recurse -Filter '*.psm1').FullNam
 import-module $module
 
 
-$ip = Resolve-DnsName -Name . | Where-Object -FilterScript {$_.Type -like 'AAAA'}
+$ip = Resolve-DnsName -Name www.google.com | Where-Object -FilterScript {$_.Type -like 'AAAA'}
 
 Describe "Test-Port -Port parameter" {
     It "Should throw an error on an invalid TCP port number" {
