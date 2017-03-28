@@ -9,7 +9,7 @@
 
 @{
     RootModule        = 'PowerWorks.psm1'
-    ModuleVersion     = '0.0.13.44'
+    ModuleVersion     = '0.0.14.46'
     GUID              = '92f21958-43c1-437f-9692-0725cc02405f'
     Author            = 'Robert Gouge'
     CompanyName       = 'Unknown'
@@ -25,7 +25,7 @@
             Tags         = @('SysAdmin', 'Networking', 'System', 'Administration', 'Tools')
             LicenseUri   = 'https://github.com/RobertCGouge/PowerWorks/blob/master/LICENSE'
             ProjectUri   = 'https://github.com/RobertCGouge/PowerWorks'
-            ReleaseNotes = '# Version 0.0.13.44 (2017-03-28)
+            ReleaseNotes = '# Version 0.0.14.46 (2017-03-28)
          
 ## Notes
 
@@ -41,6 +41,11 @@ First release with functionality
         }
     }
 }
+
+
+
+
+
 
 
 
