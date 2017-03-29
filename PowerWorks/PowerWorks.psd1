@@ -9,7 +9,7 @@
 
 @{
     RootModule        = 'PowerWorks.psm1'
-    ModuleVersion     = '0.0.16.54'
+    ModuleVersion     = '0.0.17.55'
     GUID              = '92f21958-43c1-437f-9692-0725cc02405f'
     Author            = 'Robert Gouge'
     CompanyName       = 'Unknown'
@@ -25,21 +25,25 @@
             Tags         = @('SysAdmin', 'Networking', 'System', 'Administration', 'Tools')
             LicenseUri   = 'https://github.com/RobertCGouge/PowerWorks/blob/master/LICENSE'
             ProjectUri   = 'https://github.com/RobertCGouge/PowerWorks'
-            ReleaseNotes = '# Version 0.0.16.54 (2017-03-29)
+            ReleaseNotes = '# Version 0.0.17.55 (2017-03-29)
          
 ## Notes
 
-Finalize functionality
+Added more Verbose output
 
 ## Functtions
 
 ### Test-Port
 
-* Added IPv6 functionality.
-* Completed functionality.'
+* Added additional Verbose output.'
         }
     }
 }
+
+
+
+
+
 
 
 
