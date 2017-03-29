@@ -2,11 +2,10 @@
          
 ## Notes
 
-Finalize functionality
+Added more Verbose output
 
 ## Functtions
 
 ### Test-Port
 
-* Added IPv6 functionality.
-* Completed functionality.
+* Added additional Verbose output.

@@ -113,14 +113,18 @@ function Test-Port
             do
             {
                 Start-Sleep -Seconds 5
+                Write-Verbose -Message "Unable to connect to Port: $Port on Computer: $Computer. `r`n Sleeping for 5 seconds"
             } until (Test-NetConnection -ComputerName $Computer -Port $Port)
+            Write-Verbose -Message "Successfuly connected to Port: $Port on Computer: $Computer"
         }
         if($IP -ne $null)
         {
             do
             {
                 Start-Sleep -Seconds 5
+                Write-Verbose -Message "Unable to connect to Port: $Port on IP: $IP. `r`n Sleeping for 5 seconds"
             } until (Test-NetConnection -ComputerName $IP -Port $Port)
+            Write-Verbose -Message "Successfuly connected to Port: $Port on IP: $IP"
         }
         
     }
