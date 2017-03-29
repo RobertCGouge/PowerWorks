@@ -12,7 +12,7 @@ Test-Port [-Computer] <Object> [-Port] <Int32>
 
 ### IPAddress
 ```
-Test-Port [-IPv4] <Object> [[-Port] <Int32>]
+Test-Port [-IP] <IPAddress> [[-Port] <Int32>]
 ```
 
 ## DESCRIPTION
@@ -29,17 +29,27 @@ Test-Port -Computer somePC -Port 80
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-Test-Port -IPv4 someIP -Port 80
+Test-Port -IP someIPv4 -Port 80
 ```
 
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
-Test-Port -Computer somePC -Port 80 -Verbose
+Test-Port -IP someIPv6 -Port 80
 ```
 
 ### -------------------------- EXAMPLE 4 --------------------------
 ```
-Test-Port -IPv4 someIP -Port 80 -Verbose
+Test-Port -Computer somePC -Port 80 -Verbose
+```
+
+### -------------------------- EXAMPLE 5 --------------------------
+```
+Test-Port -IP someIPv4 -Port 80 -Verbose
+```
+
+### -------------------------- EXAMPLE 6 --------------------------
+```
+Test-Port -IP someIPv6 -Port 80 -Verbose
 ```
 
 ## PARAMETERS
@@ -59,11 +69,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -IPv4
-This is the IP address of the computer you want to test connectivity to
+### -IP
+This is the IP address of the computer you want to test connectivity to.
+Support both IPv4 and IPv6
 
 ```yaml
-Type: Object
+Type: IPAddress
 Parameter Sets: IPAddress
 Aliases: 
 
@@ -111,7 +122,7 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[http://powerworks.readthedocs.io/en/latest/functions/Test-Port.md](http://powerworks.readthedocs.io/en/latest/functions/Test-Port.md)
+[http://powerworks.readthedocs.io/en/latest/functions/Test-Port](http://powerworks.readthedocs.io/en/latest/functions/Test-Port)
 
 [https://github.com/RobertCGouge/PowerWorks/blob/master/PowerWorks/Public/Test-Port.ps1](https://github.com/RobertCGouge/PowerWorks/blob/master/PowerWorks/Public/Test-Port.ps1)
 
