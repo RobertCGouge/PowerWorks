@@ -2,10 +2,10 @@
          
 ## Notes
 
-Added more Verbose output
+Madded mandatory tag for the -Port parameter when using the -IP parameter
 
 ## Functtions
 
 ### Test-Port
 
-* Added additional Verbose output.
+* Madded mandatory tag for the -Port parameter when using the -IP parameter

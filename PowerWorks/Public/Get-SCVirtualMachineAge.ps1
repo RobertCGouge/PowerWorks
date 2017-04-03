@@ -12,7 +12,7 @@ function Get-SCVirtualMachineAge
 {
     [CmdletBinding()]
     [Alias()]
-    [OutputType([VirtualMachine])]
+    #[OutputType([VirtualMachine])]
     Param
     (
         # This is System Center Virtual Machine Manager you want to query for Virtual Machines

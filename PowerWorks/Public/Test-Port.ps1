@@ -89,7 +89,8 @@ function Test-Port
                 Position = 1,
                 ParameterSetName = 'ComputerName',
         HelpMessage = 'This is the port on the remote Computer you want to test connectivity to')]
-        [Parameter(ParameterSetName = 'IPAddress')]
+        [Parameter(Mandatory = $true,
+                ParameterSetName = 'IPAddress')]
         [ValidateRange(1,65535)]
         [int]
         $Port
