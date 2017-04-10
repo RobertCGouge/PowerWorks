@@ -28,13 +28,3 @@
     
 
 }
-<#
-$VMArrayList= New-Object -TypeName System.Collections.ArrayList
-
-foreach ($item in $(Get-SCVirtualMachine))
-{
-  $null = $VMArrayList.Add([VirtualMachine]::new($item.Name))
-}
-#>
-
-$testvm = [VirtualMachine]::new('netdcbna02')
